@@ -13,7 +13,7 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-
+    
     function login() {
         let data = { email, password };
         fetch(configData["api_base_url"] + "/auth/login", {
@@ -42,12 +42,12 @@ const Login = () => {
     };
     return (
         <>
-            <img class="wave" src={WaveImg} />
-            <div class="container">
-                <div class="img">
+            <img className="wave" src={WaveImg} />
+            <div className="container">
+                <div className="img">
                     <img src={BgImg} />
                 </div>
-                <div class="login-content">
+                <div className="login-content">
                     <Form
                         name="normal_login"
                         className="login-form"
@@ -60,7 +60,7 @@ const Login = () => {
                     >
                         <Form.Item className="login-title-form">
                             <img src={AvtImg} />
-                            <div class="login-title-text">Welcome</div>
+                            <div className="login-title-text">Welcome</div>
                         </Form.Item>
                         <Form.Item
                             name="username"
