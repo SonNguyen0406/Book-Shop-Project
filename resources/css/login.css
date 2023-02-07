@@ -53,10 +53,10 @@
 }
 
 .login-form-button {
-    background-color: #29c28e;
+    background-color: var(--green);
     width: 100%;
 }
 
 .login-form-button:hover {
-    background-color: #32d19c !important;
+    background-color: var(--hover-green) !important;
 }

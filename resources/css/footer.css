@@ -1,0 +1,13 @@
+#footer {
+    padding: 0 !important;
+    background: var(--green) !important;
+}
+
+.footer {
+    padding: 2rem 10rem;
+}
+
+.footer .ant-list-item,
+.footer .ant-list-item .ant-list-item-meta-description {
+    color: white !important;
+}

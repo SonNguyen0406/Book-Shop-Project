@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/login', function () {
-    return view('layout/auth');
+    return view('layouts/auth');
 });
+
+Route::get('/{any?}', function () {
+    return view('layouts/app');
+})  ->where('/book-shelf', '.*')
+    ->where('/service', '.*')
+    ->where('/flash-sale', '.*')
+    ->where('/new-letter', '.*')
+    ->where('/new-book', '.*')
+    ->where('/deal', '.*')
+    ->where('/review', '.*')
+    ->where('/blog', '.*');
