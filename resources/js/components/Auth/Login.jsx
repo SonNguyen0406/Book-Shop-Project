@@ -1,24 +1,53 @@
-import React from "react";
 import ReactDOM from "react-dom";
+import { React, useState, createContext } from "react";
 import "../../../css/login.css";
 import WaveImg from "../../../img/wave.png";
 import BgImg from "../../../img/bg.svg";
 import AvtImg from "../../../img/avatar.svg";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
+import configData from "../../../../config.json";
 
+export const Logincontext = createContext()
 const Login = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    
+    function login() {
+        let data = { email, password };
+        fetch(configData["api_base_url"] + "/auth/login", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        }).then((response) => {
+            response.json().then((result) => {
+                console.log("result.access_token", result.access_token);
+                if (result.access_token) {
+                    window.location.href = "/";
+                }
+            });
+        });
+    }
+
+    const onFinishFailed = (errorInfo) => {
+        console.log("Failed:", errorInfo);
+    };
+
     const onFinish = (values) => {
         console.log("Received values of form: ", values);
     };
     return (
         <>
-            <img class="wave" src={WaveImg} />
-            <div class="container">
-                <div class="img">
+            <img className="wave" src={WaveImg} />
+            <div className="container">
+                <div className="img">
                     <img src={BgImg} />
                 </div>
-                <div class="login-content">
+                <div className="login-content">
                     <Form
                         name="normal_login"
                         className="login-form"
@@ -26,10 +55,12 @@ const Login = () => {
                             remember: true,
                         }}
                         onFinish={onFinish}
+                        onFinishFailed={onFinishFailed}
+                        autoComplete="off"
                     >
                         <Form.Item className="login-title-form">
                             <img src={AvtImg} />
-                            <div class="login-title-text">Welcome</div>
+                            <div className="login-title-text">Welcome</div>
                         </Form.Item>
                         <Form.Item
                             name="username"
@@ -41,6 +72,9 @@ const Login = () => {
                             ]}
                         >
                             <Input
+                                value={email}
+                                className="input"
+                                onChange={(e) => setEmail(e.target.value)}
                                 prefix={
                                     <UserOutlined className="site-form-item-icon" />
                                 }
@@ -57,6 +91,9 @@ const Login = () => {
                             ]}
                         >
                             <Input
+                                value={password}
+                                className="input"
+                                onChange={(e) => setPassword(e.target.value)}
                                 prefix={
                                     <LockOutlined className="site-form-item-icon" />
                                 }
@@ -64,7 +101,7 @@ const Login = () => {
                                 placeholder="Password"
                             />
                         </Form.Item>
-                        
+
                         <Form.Item>
                             <div className="login-form-forgot" href="">
                                 Forgot Password?
@@ -76,6 +113,7 @@ const Login = () => {
                                 type="primary"
                                 htmlType="submit"
                                 className="login-form-button"
+                                onClick={login}
                             >
                                 Log in
                             </Button>
