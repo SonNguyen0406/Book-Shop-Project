@@ -5,35 +5,53 @@ import {
     HomeOutlined,
     BookOutlined,
 } from "@ant-design/icons";
-import { Row, Col, Menu, Input } from "antd";
-import { useState, useEffect } from "react";
+import { Row, Col, Menu, Input, Badge } from "antd";
+import { useState, useEffect, useRef } from "react";
 import "../../../../css/header.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { cartUiActions } from "../../store/shopping-cart/cartUiSlice";
 
 const { Search } = Input;
 const items = [
     {
-        label: "Home",
+        label: <NavLink to="/">Home</NavLink>,
         key: "home",
     },
     {
-        label: "Product",
-        key: "product",
+        label: <NavLink to="/books">Books</NavLink>,
+        key: "Books",
+    },
+    {
+        label: <NavLink to="/checkout">Checkout</NavLink>,
+        key: "checkout",
+    },
+    {
+        label: <NavLink to="/contact">Contact</NavLink>,
+        key: "contact",
     },
 ];
 
 const Header = () => {
     const [current, setCurrent] = useState("home");
     const [scroll, setScroll] = useState(false);
+
+    const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+    const dispatch = useDispatch();
+
+    const toggleCart = () => {
+        dispatch(cartUiActions.toggle());
+    };
+
     const onClick = (e) => {
         setCurrent(e.key);
     };
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-          setScroll(window.scrollY > 70);
+            setScroll(window.scrollY > 70);
         });
-      }, []);
+    }, []);
 
     return (
         <div>
@@ -55,7 +73,9 @@ const Header = () => {
                 </Col>
                 <Col span={8} className="header-1-icon-nav">
                     <HeartOutlined />
-                    <ShoppingCartOutlined />
+                    <Badge count={totalQuantity} onClick={toggleCart}>
+                        <ShoppingCartOutlined style={{fontSize:'2rem'}}/>
+                    </Badge>
                     <HomeOutlined />
                 </Col>
             </Row>

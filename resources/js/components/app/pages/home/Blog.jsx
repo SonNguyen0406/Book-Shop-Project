@@ -1,46 +1,53 @@
 import React from "react";
 import { Card, Row, Col, Button, Rate, Divider } from "antd";
-import ImgReview1 from "../../../../img/pic-1.png";
-import ImgReview2 from "../../../../img/pic-2.png";
-import ImgReview3 from "../../../../img/pic-3.png";
-import ImgReview4 from "../../../../img/pic-4.png";
-import ImgReview5 from "../../../../img/pic-5.png";
-import ImgReview6 from "../../../../img/pic-6.png";
+import ImgBlog1 from "../../../../../img/blog-1.jpg";
+import ImgBlog2 from "../../../../../img/blog-2.jpg";
+import ImgBlog3 from "../../../../../img/blog-3.jpg";
+import ImgBlog4 from "../../../../../img/blog-4.jpg";
+import ImgBlog5 from "../../../../../img/blog-5.jpg";
 import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "../../../../css/blog.css";
+import "../../../../../css/blog.css";
 
 const { Meta } = Card;
 const data = [
     {
         id: 1,
-        img: ImgReview1,
-        name: "Book Name",
+        img: ImgBlog1,
+        name: "Blog Name",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.",
         star_rate: 3,
     },
     {
         id: 2,
-        img: ImgReview2,
-        name: "Book Name",
+        img: ImgBlog2,
+        name: "Blog Name",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.",
         star_rate: 3,
     },
     {
         id: 3,
-        img: ImgReview3,
-        name: "Book Name",
+        img: ImgBlog3,
+        name: "Blog Name",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.",
         star_rate: 3,
     },
     {
         id: 4,
-        img: ImgReview4,
-        name: "Book Name",
+        img: ImgBlog4,
+        name: "Blog Name",
+        description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.",
+        star_rate: 3,
+    },
+    {
+        id: 5,
+        img: ImgBlog5,
+        name: "Blog Name",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.",
         star_rate: 3,
