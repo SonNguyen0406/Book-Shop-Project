@@ -1,13 +1,13 @@
 import React from "react";
 import { Card, Row, Col, Button, Image, Divider, Rate } from "antd";
-import ImgSale1 from "../../../../img/book-10.png";
-import ImgSale2 from "../../../../img/book-11.png";
-import ImgSale3 from "../../../../img/book-12.png";
-import ImgSale4 from "../../../../img/book-13.png";
+import ImgSale1 from "../../../../../img/book-10.png";
+import ImgSale2 from "../../../../../img/book-11.png";
+import ImgSale3 from "../../../../../img/book-12.png";
+import ImgSale4 from "../../../../../img/book-13.png";
 import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "../../../../css/newBook.css";
+import "../../../../../css/newBook.css";
 
 const data = [
     {
@@ -16,7 +16,7 @@ const data = [
         book_name: "Book Name",
         price: "$1.00",
         oldprice: "$2.00",
-        star_rate: 3,
+        star_rate: 3.5,
     },
     {
         id: 2,
@@ -24,7 +24,7 @@ const data = [
         book_name: "Book Name",
         price: "$1.00",
         oldprice: "$2.00",
-        star_rate: 4,
+        star_rate: 2,
     },
     {
         id: 3,
@@ -48,7 +48,7 @@ const data = [
         book_name: "Book Name",
         price: "$1.00",
         oldprice: "$2.00",
-        star_rate: 5,
+        star_rate: 3.5,
     },
 ];
 const NewBook = () => {

@@ -1,12 +1,12 @@
 import React from "react";
-import BookShelf from "./BookShelf";
-import Service from "./Service";
-import FlashSale from "./FlashSale";
-import NewLetter from "./NewLetter";
-import NewBook from "./NewBook";
-import Deal from "./Deal";
-import Review from "./Review";
-import Blog from "./Blog";
+import BookShelf from "./home/BookShelf";
+import Service from "./home/Service";
+import FlashSale from "./home/FlashSale";
+import NewLetter from "./home/NewLetter";
+import NewBook from "./home/NewBook";
+import Deal from "./home/Deal";
+import Review from "./home/Review";
+import Blog from "./home/Blog";
 
 const Home = () => {
     return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Form, Input } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import "../../../../css/newLetter.css";
+import "../../../../../css/newLetter.css";
 
 const NewLetter = () => {
     return (
