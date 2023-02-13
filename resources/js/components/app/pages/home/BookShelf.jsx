@@ -1,16 +1,17 @@
 import React from "react";
-import book1 from "../../../../img/book-1.png";
-import book2 from "../../../../img/book-2.png";
-import book3 from "../../../../img/book-3.png";
-import book4 from "../../../../img/book-4.png";
-import book5 from "../../../../img/book-5.png";
-import book6 from "../../../../img/book-6.png";
-import stand from "../../../../img/stand.png";
-import "../../../../css/bookShelf.css";
+import book1 from "../../../../../img/book-1.png";
+import book2 from "../../../../../img/book-2.png";
+import book3 from "../../../../../img/book-3.png";
+import book4 from "../../../../../img/book-4.png";
+import book5 from "../../../../../img/book-5.png";
+import book6 from "../../../../../img/book-6.png";
+import stand from "../../../../../img/stand.png";
+import "../../../../../css/bookShelf.css";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Button, Image } from "antd";
+import { Link, NavLink } from "react-router-dom";
 
 const BookShelf = () => {
     return (
@@ -23,7 +24,9 @@ const BookShelf = () => {
                     Necessitatibus, Aliquid Ex Minima At!
                 </div>
                 <div>
-                    <Button>Shop Now</Button>
+                    <Link to={"/books"}>
+                        <Button>Shop Now</Button>
+                    </Link>
                 </div>
             </div>
             <div className="book-shelf-swiper">

@@ -1,17 +1,3 @@
-.flash-sale-card {
-    padding: 1rem 2rem;
-    background: linear-gradient(15deg, #eee 40%, #fff 30%);
-}
-
 .flash-sale {
     padding: 0 10rem 3rem 10rem;
-}
-
-.flash-sale-card button,
-.flash-sale-card button:hover {
-    background: var(--green);
-    color: white !important;
-    margin-top: 1rem;
-    width: 150px;
-    height: 50px;
 }

@@ -1,15 +1,15 @@
 import React from "react";
 import { Card, Row, Col, Button, Divider, Rate } from "antd";
-import ImgReview1 from "../../../../img/pic-1.png";
-import ImgReview2 from "../../../../img/pic-2.png";
-import ImgReview3 from "../../../../img/pic-3.png";
-import ImgReview4 from "../../../../img/pic-4.png";
-import ImgReview5 from "../../../../img/pic-5.png";
-import ImgReview6 from "../../../../img/pic-6.png";
+import ImgReview1 from "../../../../../img/pic-1.png";
+import ImgReview2 from "../../../../../img/pic-2.png";
+import ImgReview3 from "../../../../../img/pic-3.png";
+import ImgReview4 from "../../../../../img/pic-4.png";
+import ImgReview5 from "../../../../../img/pic-5.png";
+import ImgReview6 from "../../../../../img/pic-6.png";
 import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "../../../../css/review.css";
+import "../../../../../css/review.css";
 
 const { Meta } = Card;
 const data = [

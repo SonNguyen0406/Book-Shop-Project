@@ -6,7 +6,7 @@ import {
     PhoneOutlined,
 } from "@ant-design/icons";
 import { Row, Col } from "antd";
-import '../../../../css/service.css'
+import '../../../../../css/service.css'
 
 const data = [
     {

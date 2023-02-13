@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Row, Col, Button, Image } from "antd";
-import ImgDeal from "../../../../img/deal-img.jpg";
-import "../../../../css/deal.css";
+import ImgDeal from "../../../../../img/deal-img.jpg";
+import "../../../../../css/deal.css";
 
 const Deal = () => {
     return (
